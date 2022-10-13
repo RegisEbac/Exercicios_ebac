@@ -1,0 +1,22 @@
+# language: Pt
+
+funcionalidade: Login na plataforma
+
+como cliente da ebac-shop
+Quero fazer o login (autenticação)na plataforma
+Para visualizar meus pedidos
+
+Cenário: Direcionamento para a tela checkout
+Dado que eu acesse a "tela de cadastro" da plataforma 
+Quando eu inserir os "dados válidos"
+Então deve ser direcionados para a tela de checkout.
+
+Cenário: Alerta
+Dado que eu acesse a "tela de cadastro" da plataforma 
+Quando eu inserir algum campo "invalido"
+Então deve exibir mensagem de "alerta" <usuário inválido>.
+
+Cenário: Usuario Inválido
+Dado que eu acesse a "tela de cadastro" da plataforma 
+Quando eu inserir a "senha incorreta" 
+Então deve exibir a mensagem " senha incorreta, tente novamente"
