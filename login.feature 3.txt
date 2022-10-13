@@ -1,0 +1,33 @@
+#language:Pt
+
+funcionalidade: Tela de cadastro
+
+Como cliente da Ebac-shop
+Quero fazer concluir meu cadastro
+Para finalizar minha compra
+
+Cenário: Dados Obrigatórios
+Dado que eu acesse a tela  de cadastro ebac 
+Quando eu estiver me cadastrando
+E esquecer de colocar "asteriscos" nos dados Obrigatórios.
+Então deve enviar a "mensagem usuário não cadastrado"
+
+Cenário: Cadastro Obrigatório
+Dado  que eu acesse a tela  de cadastro ebac 
+Quando eu estiver me cadastrando 
+Então deve aparecer "asteriscos nos campos obrigatorios"
+
+Cenário: Tela de cadastros
+Dado que eu acesse a tela  de cadastro ebac 
+Quando eu estiver finalizando o cadastro " com algum tipo de erro"
+E o sistema identificar uma falha
+Então deve enviar a mensagem de "alerta direcionando para o erro"
+
+Esquema do Cenário: Autenticar multiplos cadastros.
+Quando eu acessar pagina de <cadastro>
+E a <senha>
+Então deve exibir < mensagem> de cadastro de sucesso
+         Usuário / Senha / Mensagem
+"João@ebac" / "ebac123" / "cadastrado com sucesso joao"
+"felipe@ebac" /"ebac789" / "cadastrado com sucesso felipe"
+"pedro@ebac" / ebac932" / "cadastrado com sucesso pedro
